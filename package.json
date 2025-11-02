@@ -1,0 +1,63 @@
+{
+  "name": "r3f",
+  "version": "0.0.1",
+  "description": "r3f",
+  "keywords": [],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": [
+    "**/*.css",
+    "**/injectGlobalCss.js"
+  ],
+  "type": "module",
+  "main": "./dist/ndmvr-r3f.umd.js",
+  "module": "./dist/ndmvr-r3f.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ndmvr-r3f.es.js",
+      "require": "./dist/ndmvr-r3f.umd.js"
+    },
+    "./style.css": "./dist/ndmvr-r3f.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build-app": "vite build -c vite.config.app.js",
+    "watch": "vite build --watch",
+    "lint": "eslint ./src --ext js,jsx --report-unused-disable-directives .gitignore",
+    "preview": "vite -c vite.config.app.js",
+    "predeploy": "npm run build-app",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@ndmspc/ndmvr-aframe": "1.0.0-rc.p.33",
+    "@react-three/drei": "^10.4.2",
+    "@react-three/fiber": "^9.1.4",
+    "@react-three/uikit": "^0.8.21",
+    "@react-three/uikit-apfel": "^0.8.21",
+    "@react-three/uikit-default": "^0.8.21",
+    "@react-three/xr": "^6.6.17",
+    "d3-selection": "^3.0.0",
+    "jsroot": "https://github.com/root-project/jsroot.git#e1a46e09ea8e447e63166fda053e1aa7dc315f20",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "rxjs": "^7.8.2",
+    "three": "0.173.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.5.2",
+    "eslint": "^9.29.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "gh-pages": "^6.3.0",
+    "globals": "^16.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "vite": "^7.0.0",
+    "vite-plugin-static-copy": "^3.1.4"
+  }
+}
